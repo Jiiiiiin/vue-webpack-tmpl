@@ -19,7 +19,7 @@ const createLintingRule = () => ({
   }
 })
 
-const webpackConfig = {
+module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/main.js'
@@ -89,9 +89,3 @@ const webpackConfig = {
     child_process: 'empty'
   }
 }
-
-const vuxLoader = require('vux-loader')
-const vuxConfig = require('./vux-config')
-
-module.exports = vuxLoader.merge(webpackConfig, vuxConfig)
-
